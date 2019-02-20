@@ -1,0 +1,68 @@
+===== Prime Counter Tanpa Konkurensi =====
+Ketika Main.java dijalankan, akan menghasilkan output seperti berikut :
+"9592 primes were found between 1 to 100000" 
+Output tersebut menandakan bahwa banyaknya bilangan prima yang terdapat dalam bilangan 1 sampai 100000 adalah sebanyak 9592 bilangan.
+
+Ketika nilai variabel max pada kelas Main diubah menjadi 1000 maka output berubah menjadi seperti berikut :
+"168 primes were found between 1 to 1000"
+Output tersebut menandakan bahwa banyaknya bilangan prima yang terdapat dalam bilangan 1 sampai 1000 adalah sebanyak 168 bilangan.
+ 
+ Ketika nilai variabel max pada kelas Main diubah menjadi 10000 maka output berubah menjadi seperti berikut :
+"1229 primes were found between 1 to 10000"
+Output tersebut menandakan bahwa banyaknya bilangan prima yang terdapat dalam bilangan 1 sampai 10000 adalah sebanyak 1229 bilangan.
+ 
+ Ketika nilai variabel max pada kelas Main diubah menjadi 100000 maka output berubah menjadi seperti berikut :
+"9592 primes were found between 1 to 100000"
+Output tersebut menandakan bahwa banyaknya bilangan prima yang terdapat dalam bilangan 1 sampai 100000 adalah sebanyak 9592 bilangan.
+
+Ketika nilai variabel max pada kelas Main diubah menjadi 1000000 maka IDE hanya mengeluarkan tampilan output run 
+tetapi tidak ada nilai yang dikeluarkan. Hal tersebut terjadi karena banyaknya integer yang harus diidentifikasi oleh 
+program, sehingga membutuhkan waktu yang lama untuk menampilkan output.
+
+
+Hasil Pengamatan Task 2
+Pada PrimeCounter tanpa konkurensi, task dikerjakan secara sekuensial. Bilangan di-'ambil' satu per satu dari kumpulan bilangan, lalu diuji satu per satu apakah bilangan tersebut memenuhi kriteria bilangan prima. Jika memenuhi syarat, maka counter akan menghitung. Demikian seterusnya hingga semua bilangan dalam kompulan telah selesai diuji, sehingga membutuhkan waktu yang lama untuk memproses output. Hal tersebut akan kelihatan ketika variabel max memiliki nominal yang besar.
+
+
+
+
+===== Prime Counter dengan Konkurensi ======
+Ketika ThreadedMain.java dijalankan, maka akan mengeluarkan output seperti berikut :
+"2 primes were found between 1 to 3
+1 primes were found between 4 to 6
+1 primes were found between 7 to 9
+0 primes were found between 10 to 10"
+
+Ketika nilai variabe max pada kelas ThreadedMain.java diubah menjadi 1000, maka output yang dihasilkan adalah sebagai berikut :
+"53 primes were found between 1 to 250
+42 primes were found between 251 to 500
+37 primes were found between 501 to 750
+36 primes were found between 751 to 1000"
+
+
+Ketika nilai variabel max pada kelas ThreadedMain.java diubah menjadi 10000, maka output yang dihasilkan adalah sebagai berikut :
+"367 primes were found between 1 to 2500
+302 primes were found between 2501 to 5000
+281 primes were found between 5001 to 7500
+279 primes were found between 7501 to 10000"
+
+
+Ketika nilai variabel max pada kelas ThreadedMain.java diubah menjadi 100000, maka output yang dihasilkan adalah sebagai berikut :
+"2762 primes were found between 1 to 25000
+2371 primes were found between 25001 to 50000
+2260 primes were found between 50001 to 75000
+2199 primes were found between 75001 to 100000"
+
+
+Ketika nilai variabel max pada kelas ThreadedMain.java diubah menjadi 1000000, maka output yang dihasilkan adalah sebagai berikut :
+"2044 primes were found between 1 to 250000
+19494 primes were found between 250001 to 500000
+18700 primes were found between 500001 to 750000
+18260 primes were found between 750001 to 1000000"
+
+
+Hasil Pengamatan Task 3
+Pada Prime Counter dengan konkurensi,  program menghadapi banyak pekerjaan sekaligus namun tetap dapat dikerjakan secara bersamaan. Karena struktur dan cara kerja pada Program Counter ini sudah dibuat sedemikian rupa sehingga dapat membagi resource pada setiap task yang ada. 
+Sehingga waktu berjalan program ini lebih cepat dan lebih efisien.
+
+ 
